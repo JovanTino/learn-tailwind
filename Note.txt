@@ -1,0 +1,22 @@
+// -> Apa Itu Tailwind (Tailwind CSS merupakan framework yang bersifat utility first untuk membangun desain antarmuka khusus dengan cepat)
+
+// ---------Utilities dalam tailwind 
+// 1. Preflight -> css reset ,mereset properti-propert html default 
+// 2. Layout 
+// 3. Flexbox & Grid 
+// 4. Spacing & Sizing 
+// 5. Typography
+// 6. Background & Borders
+// 7. Effect & Filters
+// 8. Transition, Tranformation & Animation
+// 9. Tables
+// -------Features
+// 1. Interactivity
+// 2. Responsive Design
+// 3. Dark Mode
+// 4. Reusability
+// 5. Custom Styles
+// 6. Functions & Directives
+
+// beberapa note
+// Jika menggunakan vanilla css itu dinamakan component first 
