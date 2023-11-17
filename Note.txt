@@ -20,3 +20,14 @@
 
 // beberapa note
 // Jika menggunakan vanilla css itu dinamakan component first 
+
+
+
+
+note utility
+menggunakan abitrary value contoh pada background dan ukuran
+
+contoh
+mt-[63]
+bg-[3ffffof]
+ 
