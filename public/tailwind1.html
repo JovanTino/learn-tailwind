@@ -1,34 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- font family -->
+    <!-- font family  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,500;0,700;1,900&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="css/style.css">
     <title>Belajar Tailwind 1</title>
-    <style >
+    <style type="text/tailwindcss" >
         /* * {
             border: 1px solid lightblue;
         } */
+        #toggle:checked ~ label div.toggle-circle{
+                @apply translate-x-3;
+        }
     </style>
 </head>
-<body>
+<body class="dark:bg-slate-900 dark:text-slate-100">
+    <!--Belajar Fundamental tailwind  Margin Padding Dan Spacing-->
     <h1 class="text-center font-Poppins text-3xl bg-slate-400 text-white">Belajar Tailwind Day 1</h1>
     <section class="mb-10 bg-orange-500 text-white mt-[25px]" >
         <h2 class="mt-4 text-center bg-black p-3">Spacing</h2>
         <div class="m-10 bg-slate-400" >Margin</div>
         <div class="p-9 bg-slate-900">Padding</div>
     </section>
-
+<!-- Sizing -->
     <section class = "mb-10 bg-sky-400 text-white" >
         <h2 class="text-center bg-gray-600 p-3">Sizing</h2>
         <div class="w-1/2 h-32 text-center my-5 bg-black">Kotak 1</div>
         <div></div>
     </section>
-
+<!-- Style Pada Font Dan Perubahannya , Gradiasi Warna -->
     <section class="font-Serif max-w-2xl mx-auto bg-gradient-to-r from-sky-800 via-blue-500 to-sky-800 p-4 text-white mb-10">
         <h2 class="mb-2 text-3xl" >Belajar Mengenai Typhography pada tailwindcss</h2>
         <div class="text-lg font-bold">By <a href="https://www.instagram.com/jovan_tino/?hl=en" class="underline text-sky-500 font-thin">Jovantino</a>, 11 Januari 2004  </div>
@@ -47,16 +51,66 @@
 
     </div>
     <!-- effect, filter -->
-    <div class="max-w-xl h-96 bg-slate-400 mt-20 mx-auto flex bg-no-repeat bg-contain bg-center p-3 bg-origin-content" style="background-image: url(/public/img/1.jpg);">
-        <div class="bg-white/10 backdrop-blur-sm w-[200px] h-[200px] m-auto rounded-full" >
+        <div class="max-w-xl h-96 bg-slate-400 mt-20 mx-auto flex bg-no-repeat bg-contain bg-center p-3 bg-origin-content" style="background-image: url(/public/img/1.jpg);">
+            <div class="bg-white/10 backdrop-blur-sm w-[200px] h-[200px] m-auto rounded-full" >
             
         </div>
         
     </div>
-    <div class="max-w-xl h-96 mt-10 mx-auto bg-contain bg-center bg-no-repeat " style="background-image: url(/public/img/2.jpg);">
+    <div class="max-w-xl h-96 mt-10 mx-auto bg-contain bg-center bg-no-repeat sepia " style="background-image: url(/public/img/2.jpg);">
     </div>
-    <div class="mb-96 ">
+    <hr class="my-20"/>
+
+    <!-- Pembuatan Dark Mode -->
+    <div class="flex justify-center">
+        <span class="text-sm text-slate-400 mr-4">Ligth</span>
+            <input type="checkbox" id="toggle" class="hidden">
+            <label for="toggle">
+                <div class="w-9 h-5 bg-slate-500 rounded-full flex items-center p-1 cursor-pointer">
+                    <div class="w-4 h-4 bg-white rounded-full dark:translate-x-3 "></div>
+                </div>
+            </label>
+        <span class="text-sm text-slate-400 ml-4">Dark</span>
+    </div>
+    
+
+    <button class="my-10  bg-sky-500 px-5 py-2 rounded-full text-white font-semibold font-Poppins block mx-auto hover:bg-sky-800 active:bg-black focus:ring-sky-950" >Simpan</button>
+
+<!-- hover , grouping, Selection  -->
+    <div class="max-w-lg my-10 border border-slate-200 rounded-xl mx-auto p-5 shadow-md font-Poppins group hover:bg-sky-600 selection:bg-slate-600" >
+        <h4 class="text-2xl font-semibold text-slate-700 mb-3 group-hover:text-white">My Card</h4>
+        <p class="font-light group-hover:text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem necessitatibus deserunt ut perferendis, quas nemo assumenda fugiat. Libero, possimus adipisci aperiam reprehenderit molestiae dignissimos corrupti nobis eum, illo inventorAxe quo.</p>
+    </div>
+<!--  -->
+    <div class="max-w-lg my-10 border border-slate-200 rounded-xl mx-auto p-5 shadow-md font-Poppins group">
+
+        <h4 class="text-2xl text-center text-slate-700 font-bold mb-3">My Card 2</h4>
+        <p class="font-light  first-line:tracking-wide first-letter:text-7xl first-letter:float-left first-letter:mr-3" >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus error autem quidem, perferendis molestiae doloremque mollitia nemo, magnam saepe necessitatibus totam veritatis! Sed temporibus quas omnis animi doloribus vitae laborum!
+        </p>
 
     </div>
+    <!-- pembuatan input label -->
+    <div class="max-w-lg my-10 border border-slate-200 shadow-md mx-auto rounded-xl font-Poppins p-5">
+        <form action="#">
+            <label for="email">
+                <span class="block font-Poppins text-lg mb-2 font-light text-slate-700 after:content-['*'] after:text-red-500 after:ml-0.5">Email</span>
+                <input type="email" name="email" id="email" placeholder="Masukan Email..." class="px-3 py-2 w-full rounded block text-sm shadow font-light placeholder:text-slate-400 placeholder:font-light focus:outline-none focus:ring-1 focus:ring-sky-500 invalid:text-red-500 invalid:focus:ring-red-500 peer">
+                <p class="text-sm font-light m-2 text-red-500 invisible peer-invalid:visible">- Email Anda Tidak Valid</p>
+            </label>
+            
+        </form>
+        
+    </div>
+    
+    <div class="mb-96 "></div>
+    <script>
+        // Dark Mode
+        const checkbox = document.querySelector('#toggle');
+        const html = document.querySelector('html');
+        checkbox.addEventListener('click', function () {
+        html.classList.toggle('dark')
+})
+    </script>
 </body>
 </html>
