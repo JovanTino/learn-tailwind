@@ -13,9 +13,7 @@
         /* * {
             border: 1px solid lightblue;
         } */
-        #toggle:checked ~ label div.toggle-circle{
-                @apply translate-x-3;
-        }
+        
     </style>
 </head>
 <body class="dark:bg-slate-900 dark:text-slate-100">
@@ -78,13 +76,13 @@
 
 <!-- hover , grouping, Selection  -->
     <div class="max-w-lg my-10 border border-slate-200 rounded-xl mx-auto p-5 shadow-md font-Poppins group hover:bg-sky-600 selection:bg-slate-600" >
-        <h4 class="text-2xl font-semibold text-slate-700 mb-3 group-hover:text-white">My Card</h4>
+        <h4 class="text-2xl font-light mb-3 group-hover:text-white dark:text-slate-400 font">My Card</h4>
         <p class="font-light group-hover:text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem necessitatibus deserunt ut perferendis, quas nemo assumenda fugiat. Libero, possimus adipisci aperiam reprehenderit molestiae dignissimos corrupti nobis eum, illo inventorAxe quo.</p>
     </div>
 <!--  -->
     <div class="max-w-lg my-10 border border-slate-200 rounded-xl mx-auto p-5 shadow-md font-Poppins group">
 
-        <h4 class="text-2xl text-center text-slate-700 font-bold mb-3">My Card 2</h4>
+        <h4 class="text-2xl text-center text-slate-600 font-bold mb-3 ">My Card 2</h4>
         <p class="font-light  first-line:tracking-wide first-letter:text-7xl first-letter:float-left first-letter:mr-3" >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus error autem quidem, perferendis molestiae doloremque mollitia nemo, magnam saepe necessitatibus totam veritatis! Sed temporibus quas omnis animi doloribus vitae laborum!
         </p>
@@ -99,10 +97,13 @@
                 <p class="text-sm font-light m-2 text-red-500 invisible peer-invalid:visible">- Email Anda Tidak Valid</p>
             </label>
             
-        </form>
-        
+        </form>    
     </div>
-    
+    <hr class="my-20">
+    <div class="w-40 h-40 bg-sky-500 mx-auto rounded-lg shadow-lg hover:scale-150 hover:rotate-45 hover:translate-x-16">
+
+    </div>
+
     <div class="mb-96 "></div>
     <script>
         // Dark Mode
